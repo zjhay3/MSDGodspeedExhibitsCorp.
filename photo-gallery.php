@@ -71,16 +71,7 @@
             position: relative;
         }
         
-        .footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #011D02D9;  /* Dark Green Overlay */
-            z-index: 2; /* Behind the content */
-        }
+
         .font-archivo {
           font-family: 'Archivo', sans-serif;
         }
@@ -317,7 +308,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="relative bg-cover bg-center bg-no-repeat py-0.5 sm:py-3 text-white overflow-hidden mt-auto w-full font-archivo-black">
+    <footer class="footer relative bg-cover bg-center bg-no-repeat py-0.5 sm:py-3 text-white overflow-hidden mt-auto w-full font-archivo-black">
     <!-- Dark green overlay -->
     <div class="absolute top-0 left-0 w-full h-full bg-[#011D02D9] z-0"></div>
 

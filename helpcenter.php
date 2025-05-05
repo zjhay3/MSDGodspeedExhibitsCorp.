@@ -165,6 +165,7 @@
                 <h2 class="text-2xl text-gray-900 mb-4">MSD Godspeed Exhibits Corp.</h2>
                 <div class="text-gray-700">
                     <p class="mb-1">(02) 8 570-8069</p>
+                    <br>
                     <p class="mb-6">0915-9785683</p>
                     
                     <a href="https://maps.app.goo.gl/GQJoP1aYDHUgPhux8" target="_blank" class="text-secondary hover:text-secondary-dark mb-3 block">
@@ -177,10 +178,10 @@
                 </div>
                 <div class="flex gap-4 mt-6">
                     <a href="https://www.facebook.com/MSDGospeedExhibitsCorp" class="social-link">
-                        <img src="images/facebook.svg" alt="Facebook" class="w-16 h-16 transition-transform duration-300 hover:scale-110">
+                        <img src="images/facebookk.png" alt="Facebook" class="w-16 h-16 transition-transform duration-300 hover:scale-110">
                     </a>
                     <a href="https://www.instagram.com/msdgodspeed2022/" class="social-link">
-                        <img src="images/instagram.svg" alt="Instagram" class="w-16 h-16 transition-transform duration-300 hover:scale-110">
+                        <img src="images/instagramm.png" alt="Instagram" class="w-16 h-16 transition-transform duration-300 hover:scale-110">
                     </a>
                 </div>
             </div>
@@ -514,78 +515,71 @@ function updateStarDisplay(isHover = false) {
     ratingInput.value = selectedRating;
 }
 
-// Form submission handling
-const feedbackForm = document.getElementById('feedback-form');
-if (feedbackForm) {
-    feedbackForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-        
-        const formData = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            rating: document.getElementById('rating').value,
-            message: document.getElementById('message').value,
-            date: new Date().toLocaleString()
-        };
-
-        // Show loading state
-        const submitBtn = document.querySelector('.submit-btn');
-        const originalText = submitBtn.textContent;
-        submitBtn.textContent = 'Sending...';
-        submitBtn.disabled = true;
-        submitBtn.classList.add('opacity-70');
-
-        // First send to your database
-        fetch('save_feedback.php', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData)
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.error) {
-                throw new Error(data.error);
-            }
+    // UPDATED FORM SUBMISSION HANDLING
+    const feedbackForm = document.getElementById('feedback-form');
+    if (feedbackForm) {
+        feedbackForm.addEventListener('submit', function(event) {
+            event.preventDefault();
             
-            // If database save is successful, send via EmailJS
-            return emailjs.send('service_ci53h1f', 'template_o2yy36z', {
-                to_email: "wdcampos@msdgodspeedexhibits.com",
-                reply_to: formData.email,
-                from_name: formData.name || 'Anonymous',
-                from_email: formData.email,
-                name: formData.name,
-                email: formData.email,
-                rating: formData.rating,
-                message: formData.message,
-                date: formData.date
-            });
-        })
-        .then(
-            function(response) {
-                const statusMessage = document.getElementById('status-message');
-                statusMessage.innerHTML = 'Thank you! Your feedback has been submitted.';
-                statusMessage.className = 'text-center text-green-600 font-medium my-4 px-4 py-2 bg-green-100 rounded';
-                feedbackForm.reset();
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                rating: document.getElementById('rating').value,
+                message: document.getElementById('message').value,
+                date: new Date().toLocaleString()
+            };
+
+            // Show loading state
+            const submitBtn = document.querySelector('.submit-btn');
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+
+            // First send to your database
+            fetch('save_feedback.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    throw new Error(data.error);
+                }
                 
-                // Reset stars
-                selectedRating = 0;
-                updateStarDisplay();
-            },
-            function(error) {
-                const statusMessage = document.getElementById('status-message');
-                statusMessage.innerHTML = 'Error: ' + error.message + '. Please try again or contact us directly.';
-                statusMessage.className = 'text-center text-red-600 font-medium my-4 px-4 py-2 bg-red-100 rounded';
-            }
-        )
-        .finally(() => {
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-            submitBtn.classList.remove('opacity-70');
+                // If database save is successful, send via EmailJS
+                return emailjs.send('service_ci53h1f', 'template_o2yy36z', {
+                    to_email: "wdcampos@msdgodspeedexhibits.com",
+                    reply_to: formData.email,
+                    from_name: formData.name || 'Anonymous',
+                    from_email: formData.email,
+                    name: formData.name,
+                    email: formData.email,
+                    rating: formData.rating,
+                    message: formData.message,
+                    date: formData.date
+                });
+            })
+            .then(
+                function(response) {
+                    document.getElementById('status-message').innerHTML = 
+                        'Thank you! Your feedback has been submitted.';
+                    document.getElementById('status-message').style.color = 'green';
+                    document.getElementById('feedback-form').reset();
+                },
+                function(error) {
+                    document.getElementById('status-message').innerHTML = 
+                        'Error: ' + error.message + '. Please try again or contact us directly.';
+                    document.getElementById('status-message').style.color = 'red';
+                }
+            )
+            .finally(() => {
+                submitBtn.textContent = 'Send Feedback';
+                submitBtn.disabled = false;
+            });
         });
-    });
-}
+    }
 
 // Back button event listener
 document.getElementById("backButton").addEventListener("click", function () {

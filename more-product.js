@@ -463,27 +463,27 @@ function openLightbox(imageSrc, imageAlt = '') {
     image.alt = imageAlt;
     image.classList.add("lightbox-image");
 
-    // Add zoom functionality
-    imageContainer.addEventListener("mousemove", function(e) {
-        const container = e.target.closest(".lightbox-image-container");
-        const img = container.querySelector("img");
+    // // Add zoom functionality
+    // imageContainer.addEventListener("mousemove", function(e) {
+    //     const container = e.target.closest(".lightbox-image-container");
+    //     const img = container.querySelector("img");
         
-        // Calculate mouse position relative to container
-        const rect = container.getBoundingClientRect();
-        const x = (e.clientX - rect.left) / rect.width * 100;
-        const y = (e.clientY - rect.top) / rect.height * 100;
+    //     // Calculate mouse position relative to container
+    //     const rect = container.getBoundingClientRect();
+    //     const x = (e.clientX - rect.left) / rect.width * 100;
+    //     const y = (e.clientY - rect.top) / rect.height * 100;
         
-        // Apply transform and background position for zoom effect
-        img.style.transform = 'scale(2)';
-        img.style.transformOrigin = `${x}% ${y}%`;
-    });
+    //     // Apply transform and background position for zoom effect
+    //     img.style.transform = 'scale(2)';
+    //     img.style.transformOrigin = `${x}% ${y}%`;
+    // });
 
-    // Reset zoom when mouse leaves
-    imageContainer.addEventListener("mouseleave", function(e) {
-        const img = e.target.querySelector("img");
-        img.style.transform = 'scale(1)';
-        img.style.transformOrigin = 'center center';
-    });
+    // // Reset zoom when mouse leaves
+    // imageContainer.addEventListener("mouseleave", function(e) {
+    //     const img = e.target.querySelector("img");
+    //     img.style.transform = 'scale(1)';
+    //     img.style.transformOrigin = 'center center';
+    // });
 
     // Assemble lightbox
     imageContainer.appendChild(image);
@@ -809,3 +809,40 @@ window.onload = function () {
     window.scrollTo(0, 0);
 };
 
+// Back to top button functionality
+document.addEventListener("DOMContentLoaded", function() {
+    // Create the back to top button
+    const backToTopBtn = document.createElement("button");
+    backToTopBtn.id = "backToTopBtn";
+    backToTopBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>`;
+    
+    // Updated class with responsive positioning
+    // bottom-24 for desktop, media query handles mobile positioning
+    backToTopBtn.className = "fixed bottom-24 right-6 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center z-50 transform scale-0 opacity-0";
+    document.body.appendChild(backToTopBtn);
+    
+    // Function to check scroll position and show/hide the button
+    function toggleBackToTopButton() {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.remove("scale-0", "opacity-0");
+            backToTopBtn.classList.add("scale-100", "opacity-100");
+        } else {
+            backToTopBtn.classList.remove("scale-100", "opacity-100");
+            backToTopBtn.classList.add("scale-0", "opacity-0");
+        }
+    }
+    
+    // Add scroll event listener
+    window.addEventListener("scroll", toggleBackToTopButton);
+    
+    // Add click event to scroll back to top
+    backToTopBtn.addEventListener("click", function() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+    
+    // Initial check in case page is refreshed while scrolled down
+    toggleBackToTopButton();
+});

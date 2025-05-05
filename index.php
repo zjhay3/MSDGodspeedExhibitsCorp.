@@ -97,7 +97,7 @@
         }
     </script>
 </head>
-<body class="font-swiss font-bold leading-relaxed bg-dark-gray">
+<body class="font-swiss leading-relaxed bg-dark-gray">
     <!-- Loading Screen -->
     <div class="fixed top-0 left-0 w-screen h-screen bg-[rgba(38,105,60,0.85)] flex items-center justify-center z-50 opacity-100 transition-opacity duration-500" id="loading-screen">
         <img src="images/pagereload.gif" alt="Loading..." class="w-[450px] h-[450px] object-cover rounded-full" />
@@ -131,7 +131,7 @@
     </header>
 
     <!-- Home Section -->
-    <section id="home" class="w-full overflow-hidden bg-dark-green text-white flex flex-col items-center pt-1 px-4">
+    <section id="home" class="w-full overflow-hidden bg-dark-green text-white flex flex-col items-center pt-5 px-4">
     <!-- Hero Text (just below header) -->
     <h1 class="hero-text text-center mb-8 leading-tight">
       Welcome to MSD Godspeed Exhibits Corp.
@@ -159,7 +159,7 @@
         
 		<div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-[200px_250px_250px] gap-5 mt-10">
 			<!-- 1 -->
-			<a class="group relative overflow-hidden rounded-2xl shadow-md cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-none md:col-start-1 md:col-end-2 md:row-start-1 md:row-end-2"href="fullview.php?image=about2.jpg&text=VISION%20%26%20CORE%20VALUES%20STATEMENTS%0AFrom%20MSD%20GODSPEED%20EXHIBITS%20CORPORATION,%20we%20are%20engaged%20in%20the%20following%20scope%20of%20work:%20OUTDOOR%20%26%20INDOOR%20EXHIBIT%20BOOTH%20SERVICES,%20INTERIOR%20RENOVATION,%20AND%20OPERATIONS%20MANAGEMENT.%0AFocus%20on%20achieving%20it,%20MSD%20GODSPEED%20has%20defined%20the%20following%20corporate%20values%20and%20vision.%0A%0AVISION%20STATEMENT%0AThrough%20excellence%20in%20providing%20general%20services,%20MSD%20GODSPEED%20vision%20is%20to%20provide%20the%20best%20and%20professional%20quality%20installation%20of%20booths%20and%20interior%20renovation%20projects,%20supporting%20our%20clients%20in%20better%20performance,%20efficiency,%20and%20cost-effectiveness.">
+			<a class="group relative overflow-hidden rounded-2xl shadow-md cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-none md:col-start-1 md:col-end-2 md:row-start-1 md:row-end-2"href="fullview.php?image=about1.jpg&text=%3Cstrong%3EVISION%20%26%20CORE%20VALUES%20STATEMENTS%3C%2Fstrong%3E%0AFrom%20MSD%20GODSPEED%20EXHIBITS%20CORPORATION,%20we%20are%20engaged%20in%20the%20following%20scope%20of%20work:%20OUTDOOR%20%26%20INDOOR%20EXHIBIT%20BOOTH%20SERVICES,%20INTERIOR%20RENOVATION,%20AND%20OPERATIONS%20MANAGEMENT.%0AFocus%20on%20achieving%20it,%20MSD%20GODSPEED%20has%20defined%20the%20following%20corporate%20values%20and%20vision.%0A%0A%3Cstrong%3EVISION%20STATEMENT%3C%2Fstrong%3E%0AThrough%20excellence%20in%20providing%20general%20services,%20MSD%20GODSPEED%20vision%20is%20to%20provide%20the%20best%20and%20professional%20quality%20installation%20of%20booths%20and%20interior%20renovation%20projects,%20supporting%20our%20clients%20in%20better%20performance,%20efficiency,%20and%20cost-effectiveness.">
 				<img src="images/about1.jpg" alt="About Image 1" class="w-full h-full object-cover opacity-90 transition-opacity duration-300 group-hover:opacity-100">
 				<div class="absolute inset-0 bg-gradient-to-br from-green-950/80 to-green-800/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 				<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center pointer-events-auto">
@@ -167,40 +167,40 @@
 				</div>
 			</a>
 			<!-- 2 -->
-			<a class="group relative overflow-hidden rounded-2xl shadow-md cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-none md:col-start-2 md:col-end-3 md:row-start-1 md:row-end-3" href="fullview.php?image=about2.jpg&text=At MSD GODSPEED EXHIBITS CORP, we believe in delivering nothing but the highest quality of work in every project we undertake. From the initial concept design to the final execution, our team of skilled professionals meticulously oversees every detail to ensure precision, craftsmanship, and excellence. We take pride in our commitment to upholding industry standards and best practices, consistently exceeding our clients' expectations and setting new benchmarks for quality in the exhibition industry.">
-				<img src="images/about2.jpg" alt="About Image 2" class="w-full h-full object-cover opacity-90 transition-opacity duration-300 group-hover:opacity-100">
+      <a class="group relative overflow-hidden rounded-2xl shadow-md cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-none md:col-start-2 md:col-end-3 md:row-start-1 md:row-end-3" href="fullview.php?image=about2.jpg&text=At%20%3Cstrong%3EMSD%20GODSPEED%20EXHIBITS%20CORP%3C%2Fstrong%3E,%20we%20believe%20in%20delivering%20nothing%20but%20the%20highest%20quality%20of%20work%20in%20every%20project%20we%20undertake.%20From%20the%20initial%20concept%20design%20to%20the%20final%20execution,%20our%20team%20of%20skilled%20professionals%20meticulously%20oversees%20every%20detail%20to%20ensure%20precision,%20craftsmanship,%20and%20excellence.%20We%20take%20pride%20in%20our%20commitment%20to%20upholding%20industry%20standards%20and%20best%20practices,%20consistently%20exceeding%20our%20clients'%20expectations%20and%20setting%20new%20benchmarks%20for%20quality%20in%20the%20exhibition%20industry.">
+        <img src="images/about2.jpg" alt="About Image 2" class="w-full h-full object-cover opacity-90 transition-opacity duration-300 group-hover:opacity-100">
 				<div class="absolute inset-0 bg-gradient-to-br from-green-950/80 to-green-800/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 				<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center pointer-events-auto">
 					<b>QUALITY OF WORK</b>
 				</div>
 			</a>
 			<!-- 3 -->
-			<a class="group relative overflow-hidden rounded-2xl shadow-md cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-none md:col-start-3 md:col-end-4 md:row-start-1 md:row-end-2" href="fullview.php?image=about3.jpg&text=In today's dynamic and competitive business landscape, we understand the importance of staying ahead of the curve. At MSD GODSPEED EXHIBITS CORP, we proactively monitor market trends, industry developments, and emerging technologies to anticipate and adapt to changes in the competitive landscape. By staying agile and responsive, we position ourselves as leaders in innovation, continuously evolving our strategies and offerings to meet the evolving needs of our clients and stay one step ahead of the competition.">
-				<img src="images/about3.jpg" alt="About Image 3" class="w-full h-full object-cover opacity-90 transition-opacity duration-300 group-hover:opacity-100">
+      <a class="group relative overflow-hidden rounded-2xl shadow-md cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-none md:col-start-3 md:col-end-4 md:row-start-1 md:row-end-2" href="fullview.php?image=about3.jpg&text=In%20today's%20dynamic%20and%20competitive%20business%20landscape,%20we%20understand%20the%20importance%20of%20staying%20ahead%20of%20the%20curve.%20At%20%3Cstrong%3EMSD%20GODSPEED%20EXHIBITS%20CORP%3C%2Fstrong%3E,%20we%20proactively%20monitor%20market%20trends,%20industry%20developments,%20and%20emerging%20technologies%20to%20anticipate%20and%20adapt%20to%20changes%20in%20the%20competitive%20landscape.%20By%20staying%20agile%20and%20responsive,%20we%20position%20ourselves%20as%20leaders%20in%20innovation,%20continuously%20evolving%20our%20strategies%20and%20offerings%20to%20meet%20the%20evolving%20needs%20of%20our%20clients%20and%20stay%20one%20step%20ahead%20of%20the%20competition.">
+        <img src="images/about3.jpg" alt="About Image 3" class="w-full h-full object-cover opacity-90 transition-opacity duration-300 group-hover:opacity-100">
 				<div class="absolute inset-0 bg-gradient-to-br from-green-950/80 to-green-800/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 				<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center pointer-events-auto">
 					<b>PERCEIVED COMPETITIVE REACTION</b>
 				</div>
 			</a>
 			<!-- 4 -->
-			<a class="group relative overflow-hidden rounded-2xl shadow-md cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-none md:col-start-1 md:col-end-2 md:row-start-2 md:row-end-4" href="fullview.php?image=about4.jpg&text=Our journey at MSD GODSPEED EXHIBITS CORP has been characterized by steady and sustainable organic growth. Through our unwavering dedication to delivering exceptional value and unparalleled service to our clients, we have earned their trust and loyalty, driving organic growth through positive word-of-mouth referrals and repeat business. By fostering long-term partnerships built on mutual respect, integrity, and shared success, we continue to expand our reach and influence in the exhibition industry, organically growing our business while maintaining our commitment to excellence.">
-				<img src="images/about4.jpg" alt="About Image 4" class="w-full h-full object-cover opacity-90 transition-opacity duration-300 group-hover:opacity-100">
+      <a class="group relative overflow-hidden rounded-2xl shadow-md cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-none md:col-start-1 md:col-end-2 md:row-start-2 md:row-end-4" href="fullview.php?image=about4.jpg&text=Our%20journey%20at%20%3Cstrong%3EMSD%20GODSPEED%20EXHIBITS%20CORP%3C%2Fstrong%3E%20has%20been%20characterized%20by%20steady%20and%20sustainable%20organic%20growth.%20Through%20our%20unwavering%20dedication%20to%20delivering%20exceptional%20value%20and%20unparalleled%20service%20to%20our%20clients,%20we%20have%20earned%20their%20trust%20and%20loyalty,%20driving%20organic%20growth%20through%20positive%20word-of-mouth%20referrals%20and%20repeat%20business.%20By%20fostering%20long-term%20partnerships%20built%20on%20mutual%20respect,%20integrity,%20and%20shared%20success,%20we%20continue%20to%20expand%20our%20reach%20and%20influence%20in%20the%20exhibition%20industry,%20organically%20growing%20our%20business%20while%20maintaining%20our%20commitment%20to%20excellence.">
+        <img src="images/about4.jpg" alt="About Image 4" class="w-full h-full object-cover opacity-90 transition-opacity duration-300 group-hover:opacity-100">
 				<div class="absolute inset-0 bg-gradient-to-br from-green-950/80 to-green-800/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 				<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center pointer-events-auto">
 					<b>ORGANIC GROWTH</b>
 				</div>
 			</a>
 			<!-- 5 -->
-			<a class="group relative overflow-hidden rounded-2xl shadow-md cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-none md:col-start-3 md:col-end-4 md:row-start-2 md:row-end-4" href="fullview.php?image=about5.jpg&text=At MSD GODSPEED EXHIBITS CORP, we are committed to continuous innovation and product extension to meet the evolving needs and preferences of our clients. By staying attuned to market dynamics and customer feedback, we identify new opportunities for expansion and diversification, developing innovative solutions and offerings that add value and enhance the overall customer experience. Whether it's introducing new services, expanding our product lines, or embracing emerging technologies, we are always exploring new horizons and pushing the boundaries of possibility to better serve our clients and drive sustainable growth.">
-				<img src="images/about5.jpg" alt="About Image 5" class="w-full h-full object-cover opacity-90 transition-opacity duration-300 group-hover:opacity-100">
+      <a class="group relative overflow-hidden rounded-2xl shadow-md cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-none md:col-start-3 md:col-end-4 md:row-start-2 md:row-end-4" href="fullview.php?image=about5.jpg&text=At%20%3Cstrong%3EMSD%20GODSPEED%20EXHIBITS%20CORP%3C%2Fstrong%3E,%20we%20are%20committed%20to%20continuous%20innovation%20and%20product%20extension%20to%20meet%20the%20evolving%20needs%20and%20preferences%20of%20our%20clients.%20By%20staying%20attuned%20to%20market%20dynamics%20and%20customer%20feedback,%20we%20identify%20new%20opportunities%20for%20expansion%20and%20diversification,%20developing%20innovative%20solutions%20and%20offerings%20that%20add%20value%20and%20enhance%20the%20overall%20customer%20experience.%20Whether%20it's%20introducing%20new%20services,%20expanding%20our%20product%20lines,%20or%20embracing%20emerging%20technologies,%20we%20are%20always%20exploring%20new%20horizons%20and%20pushing%20the%20boundaries%20of%20possibility%20to%20better%20serve%20our%20clients%20and%20drive%20sustainable%20growth.">
+        <img src="images/about5.jpg" alt="About Image 5" class="w-full h-full object-cover opacity-90 transition-opacity duration-300 group-hover:opacity-100">
 				<div class="absolute inset-0 bg-gradient-to-br from-green-950/80 to-green-800/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 				<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center pointer-events-auto">
 					<b>PRODUCT EXTENSION</b>
 				</div>
 			</a>
 			<!-- 6 -->
-			<a class="group relative overflow-hidden rounded-2xl shadow-md cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-none md:col-start-2 md:col-end-3 md:row-start-3 md:row-end-4" href="fullview.php?image=about6.jpg&text=Integrity is the cornerstone of our business philosophy at MSD GODSPEED EXHIBITS CORP. We conduct ourselves with honesty, transparency, and integrity in all our dealings, fostering trust and credibility with our clients, partners, and stakeholders. We believe in fair and ethical business practices, upholding the highest standards of professionalism and integrity in every interaction. By building relationships based on trust, respect, and mutual benefit, we create a positive and conducive environment for collaboration and success, ensuring that every transaction is conducted with integrity and honor.">
-				<img src="images/about6.jpg" alt="About Image 6" class="w-full h-full object-cover opacity-90 transition-opacity duration-300 group-hover:opacity-100">
+      <a class="group relative overflow-hidden rounded-2xl shadow-md cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-none md:col-start-2 md:col-end-3 md:row-start-3 md:row-end-4" href="fullview.php?image=about6.jpg&text=Integrity%20is%20the%20cornerstone%20of%20our%20business%20philosophy%20at%20%3Cstrong%3EMSD%20GODSPEED%20EXHIBITS%20CORP%3C%2Fstrong%3E.%20We%20conduct%20ourselves%20with%20honesty,%20transparency,%20and%20integrity%20in%20all%20our%20dealings,%20fostering%20trust%20and%20credibility%20with%20our%20clients,%20partners,%20and%20stakeholders.%20We%20believe%20in%20fair%20and%20ethical%20business%20practices,%20upholding%20the%20highest%20standards%20of%20professionalism%20and%20integrity%20in%20every%20interaction.%20By%20building%20relationships%20based%20on%20trust,%20respect,%20and%20mutual%20benefit,%20we%20create%20a%20positive%20and%20conducive%20environment%20for%20collaboration%20and%20success,%20ensuring%20that%20every%20transaction%20is%20conducted%20with%20integrity%20and%20honor.">
+        <img src="images/about6.jpg" alt="About Image 6" class="w-full h-full object-cover opacity-90 transition-opacity duration-300 group-hover:opacity-100">
 				<div class="absolute inset-0 bg-gradient-to-br from-green-950/80 to-green-800/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 				<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center pointer-events-auto">
 					<b>STRAIGHT & HONORABLE DEALINGS</b>
@@ -228,19 +228,19 @@
                     </div>
                     <div class="flex-1 bg-[#004d04] text-white p-5 rounded-lg text-left">
                         <div class="flex items-center">
-                            <div class="w-10 h-10 rounded-full bg-accent-gold text-white flex items-center justify-center text-lg font-bold mr-2.5">1</div>
+                            <div class="w-3 h-3 rounded-full bg-accent-gold text-white flex items-center justify-center text-lg font-bold mr-2.5"></div>
                             <h3 class="text-xl"><b class="font-archivo-narrow">Booth Contractor for Exhibitions & Events</b></h3>
                         </div>
                         <p class="my-3 font-archivo font-normal">Expert booth construction for exhibitions and events, tailored to your brand's vision and requirements.</p>
                         
                         <div class="flex items-center mt-4">
-                            <div class="w-10 h-10 rounded-full bg-accent-gold text-white flex items-center justify-center text-lg font-bold mr-2.5">2</div>
+                            <div class="w-3 h-3 rounded-full bg-accent-gold text-white flex items-center justify-center text-lg font-bold mr-2.5"></div>
                             <h3 class="text-xl"><b class="font-archivo-narrow">Project Management</b></h3>
                         </div>
                         <p class="my-3 font-archivo font-normal">Comprehensive project management solutions to streamline processes, ensure timely delivery, and exceed expectations.</p>
                         
                         <div class="flex items-center mt-4">
-                            <div class="w-10 h-10 rounded-full bg-accent-gold text-white flex items-center justify-center text-lg font-bold mr-2.5">3</div>
+                            <div class="w-3 h-3 rounded-full bg-accent-gold text-white flex items-center justify-center text-lg font-bold mr-2.5"></div>
                             <h3 class="text-xl"><b class="font-archivo-narrow">Branding + Creative Design</b></h3>
                         </div>
                         <p class="my-3 font-archivo font-normal">Elevate your brand with our creative design services, crafting compelling visual identities and engaging brand experiences.</p>
@@ -251,19 +251,19 @@
                 <div class="flex flex-col md:flex-row items-center gap-5" data-aos="fade-up-left" data-aos-delay="300">
                     <div class="flex-1 bg-[#004d04] text-white p-5 rounded-lg text-left md:order-1 order-2">
                         <div class="flex items-center">
-                            <div class="w-10 h-10 rounded-full bg-accent-gold text-white flex items-center justify-center text-lg font-bold mr-2.5">4</div>
+                            <div class="w-3 h-3 rounded-full bg-accent-gold text-white flex items-center justify-center text-lg font-bold mr-2.5"></div>
                             <h3 class="text-xl"><b class="font-archivo-narrow">Operations</b></h3>
                         </div>
                         <p class="my-3 font-archivo font-normal">Efficient operations management to optimize resources, streamline workflows, and maximize productivity.</p>
                         
                         <div class="flex items-center mt-4">
-                            <div class="w-10 h-10 rounded-full bg-accent-gold text-white flex items-center justify-center text-lg font-bold mr-2.5">5</div>
+                            <div class="w-3 h-3 rounded-full bg-accent-gold text-white flex items-center justify-center text-lg font-bold mr-2.5"></div>
                             <h3 class="text-xl"><b class="font-archivo-narrow">Installation & Dismantling</b></h3>
                         </div>
                         <p class="my-3 font-archivo font-normal">Professional installation and dismantling services for seamless setup and teardown of your exhibits and events.</p>
                         
                         <div class="flex items-center mt-4">
-                            <div class="w-10 h-10 rounded-full bg-accent-gold text-white flex items-center justify-center text-lg font-bold mr-2.5">6</div>
+                            <div class="w-3 h-3 rounded-full bg-accent-gold text-white flex items-center justify-center text-lg font-bold mr-2.5"></div>
                             <h3 class="text-xl"><b class="font-archivo-narrow">Logistics & Management</b></h3>
                         </div>
                         <p class="my-3 font-archivo font-normal">End-to-end logistics management to coordinate transportation, shipping, and delivery for your exhibits and events.</p>
@@ -280,19 +280,19 @@
                     </div>
                     <div class="flex-1 bg-[#004d04] text-white p-5 rounded-lg text-left">
                         <div class="flex items-center">
-                            <div class="w-10 h-10 rounded-full bg-accent-gold text-white flex items-center justify-center text-lg font-bold mr-2.5">7</div>
+                            <div class="w-3 h-3 rounded-full bg-accent-gold text-white flex items-center justify-center text-lg font-bold mr-2.5"></div>
                             <h3 class="text-xl"><b class="font-archivo-narrow">Signage & Visual Identity</b></h3>
                         </div>
                         <p class="my-3 font-archivo font-normal">Eye-catching signage and visual identity solutions to enhance your brand presence and captivate your audience.</p>
                         
                         <div class="flex items-center mt-4">
-                            <div class="w-10 h-10 rounded-full bg-accent-gold text-white flex items-center justify-center text-lg font-bold mr-2.5">8</div>
+                            <div class="w-3 h-3 rounded-full bg-accent-gold text-white flex items-center justify-center text-lg font-bold mr-2.5"></div>
                             <h3 class="text-xl"><b class="font-archivo-narrow">Furniture & Fixtures Rental</b></h3>
                         </div>
                         <p class="my-3 font-archivo font-normal">Flexible furniture and fixtures rental options to enhance the functionality and aesthetics of your space.</p>
                         
                         <div class="flex items-center mt-4">
-                            <div class="w-10 h-10 rounded-full bg-accent-gold text-white flex items-center justify-center text-lg font-bold mr-2.5">9</div>
+                            <div class="w-3 h-3 rounded-full bg-accent-gold text-white flex items-center justify-center text-lg font-bold mr-2.5"></div>
                             <h3 class="text-xl"><b class="font-archivo-narrow">Electrical & Audio Rental</b></h3>
                         </div>
                         <p class="my-3 font-archivo font-normal">State-of-the-art electrical and audio-visual equipment rental for immersive and interactive experiences.</p>

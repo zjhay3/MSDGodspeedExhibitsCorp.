@@ -75,16 +75,6 @@ $formSubmitMessage = "";
             position: relative;
         }
         
-        .footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #011D02D9;  /* Dark Green Overlay */
-            z-index: 2; /* Behind the content */
-        }
     </style>
 </head>
 <body class="font-archivo-black text-white flex flex-col min-h-screen justify-center items-center relative overflow-x-hidden">
@@ -136,7 +126,7 @@ $formSubmitMessage = "";
     </section>
 
     <!-- Footer -->
-    <footer class="relative bg-cover bg-center bg-no-repeat py-0.5 sm:py-3 text-white overflow-hidden mt-auto w-full font-archivo-black">
+    <footer class="relative bg-[url('images/footer-background.png')] bg-cover bg-center bg-no-repeat py-0.5 sm:py-3 text-white overflow-hidden mt-auto w-full font-archivo-black">
     <!-- Dark green overlay -->
     <div class="absolute top-0 left-0 w-full h-full bg-[#011D02D9] z-0"></div>
 
@@ -231,7 +221,7 @@ document.addEventListener("DOMContentLoaded", function () {
         
         // Validate inputs
         if (!name || !email || !message) {
-            statusMessage.innerHTML = '<div class="bg-red-100 text-red-700 p-2.5 mb-4 rounded-md text-center">Please fill all fields</div>';
+            statusMessage.innerHTML = '<div class="bg-red-100 text-red-700 p-2.5 mb-4 rounded-md text-center font-archivo-narrow text-normal">Please fill all fields</div>';
             return;
         }
 
@@ -240,7 +230,7 @@ document.addEventListener("DOMContentLoaded", function () {
         
         // Validate hCaptcha
         if (!hcaptchaResponse) {
-            statusMessage.innerHTML = '<div class="bg-red-100 text-red-700 p-2.5 mb-4 rounded-md text-center">Please complete the captcha verification</div>';
+            statusMessage.innerHTML = '<div class="bg-red-100 text-red-700 p-2.5 mb-4 rounded-md text-center font-archivo-narrow text-normal">Please complete the captcha verification</div>';
             return;
         }
 
@@ -252,7 +242,7 @@ document.addEventListener("DOMContentLoaded", function () {
         formData.append("h-captcha-response", hcaptchaResponse);
 
         // Show loading message
-        statusMessage.innerHTML = '<div class="bg-green-100 text-green-700 p-2.5 mb-4 rounded-md text-center">Sending message...</div>';
+        statusMessage.innerHTML = '<div class="bg-green-100 text-green-700 p-2.5 mb-4 rounded-md text-center font-archivo-narrow text-normal">Sending message...</div>';
 
         // Step 1: Save to Database via PHP
         fetch("php/insert.php", {
@@ -269,14 +259,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 jsonResponse = JSON.parse(data);
             } catch (e) {
                 // If parsing fails, show the raw response
-                statusMessage.innerHTML = '<div class="bg-red-100 text-red-700 p-2.5 mb-4 rounded-md text-center">Error processing response: ' + data + '</div>';
+                statusMessage.innerHTML = '<div class="bg-red-100 text-red-700 p-2.5 mb-4 rounded-md text-center font-archivo-narrow text-normal">Error processing response: ' + data + '</div>';
                 console.error("Failed to parse response:", data);
                 return;
             }
             
             // Check database operation status
             if (jsonResponse.status !== "success") {
-                statusMessage.innerHTML = '<div class="bg-red-100 text-red-700 p-2.5 mb-4 rounded-md text-center">' + jsonResponse.message + '</div>';
+                statusMessage.innerHTML = '<div class="bg-red-100 text-red-700 p-2.5 mb-4 rounded-md text-center font-archivo-narrow text-normal">' + jsonResponse.message + '</div>';
                 return;
             }
             
@@ -292,7 +282,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }).then(
                 function (response) {
                     console.log("Email Sent:", response);
-                    statusMessage.innerHTML = '<div class="bg-green-100 text-green-700 p-2.5 mb-4 rounded-md text-center">Message sent successfully!</div>';
+                    statusMessage.innerHTML = '<div class="bg-green-100 text-green-700 p-2.5 mb-4 rounded-md text-center font-archivo-narrow text-normal">Message sent successfully!</div>';
                     
                     // Reset form and hCaptcha
                     document.getElementById("contact-form").reset();
@@ -300,13 +290,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 },
                 function (error) {
                     console.log("EmailJS Error:", error);
-                    statusMessage.innerHTML = '<div class="bg-yellow-100 text-yellow-700 p-2.5 mb-4 rounded-md text-center">Email delivery failed, but your message was saved.</div>';
+                    statusMessage.innerHTML = '<div class="bg-yellow-100 text-yellow-700 p-2.5 mb-4 rounded-md text-center font-archivo-narrow text-normal">Email delivery failed, but your message was saved.</div>';
                 }
             );
         })
         .catch(error => {
             console.error("Database Error:", error);
-            statusMessage.innerHTML = '<div class="bg-red-100 text-red-700 p-2.5 mb-4 rounded-md text-center">Failed to save message. Please try again.</div>';
+            statusMessage.innerHTML = '<div class="bg-red-100 text-red-700 p-2.5 mb-4 rounded-md text-center font-archivo-narrow text-normal">Failed to save message. Please try again.</div>';
         });
     });
 });

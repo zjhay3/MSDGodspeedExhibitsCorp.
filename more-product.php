@@ -39,11 +39,11 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(0, 0, 0, 0.9);
             display: flex;
             justify-content: center;
             align-items: center;
-            z-index: 9999;
+            z-index: 2000;
         }
 
         .lightbox-content {
@@ -54,28 +54,32 @@
         }
 
         .lightbox-image-container {
-            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 100%;
             height: 100%;
             overflow: hidden;
+            cursor: zoom-in;
         }
 
         .lightbox-image {
-            width: 100%;
-            height: auto;
-            transition: transform 0.2s ease-in-out;
+            max-width: 100%;
+            max-height: 80vh;
+            object-fit: contain;
+            transition: transform 0.2s ease-out;
         }
 
         .close-lightbox {
             position: absolute;
             top: 10px;
-            right: 10px;
-            font-size: 30px;
+            right: 20px;
             color: white;
+            font-size: 35px;
+            font-weight: bold;
             cursor: pointer;
-            z-index: 100;
+            z-index: 2100;
         }
-
         /* Smooth zoom effect */
         .lightbox-image:hover {
             transform: scale(1.1);
@@ -89,14 +93,17 @@
             background-color: #044e06;
         }
         .sidebar::-webkit-scrollbar {
-            width: 6px;
+            width: 8px;
         }
         .sidebar::-webkit-scrollbar-thumb {
-            background-color: #044e06;
-            border-radius: 10px;
+            background: #044e06;
+            border-radius: 4px;
+        }
+        .sidebar-scrollbar::-webkit-scrollbar-track {
+            background: #002501;
         }
         .sidebar::-webkit-scrollbar-thumb:hover {
-            background-color: #066b09;
+            background: #066308;
         }
         .sidebar::-webkit-scrollbar-track {
             background-color: #021601;
@@ -132,6 +139,7 @@
         .sidebar.collapsed .sidebar-header h3 {
             display: none;
         }
+        
         .font-archivo {
           font-family: 'Archivo', sans-serif;
         }
@@ -168,6 +176,7 @@
         #sidebar {
             transition: all 0.3s ease;
             z-index: 1000;
+            border-bottom: 1px solid #066308;
         }
 
         /* Mobile sidebar styling */
@@ -180,6 +189,7 @@
                 max-height: 0;
                 overflow: hidden;
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                border-bottom: 1px solid #066308;
             }
             
             #sidebar.dropdown-active {
@@ -252,7 +262,34 @@
         #sidebar.dropdown-active {
             animation: slideDown 0.3s ease forwards;
         }
-        
+        /* Back to top button styles */
+        #backToTopBtn {
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+            z-index: 99999;
+        }
+
+        #backToTopBtn:hover {
+            transform: translateY(-5px) scale(1.05);
+        }
+
+        #backToTopBtn:active {
+            transform: translateY(0) scale(0.95);
+        }
+
+        /* Responsive positioning for small screens */
+        @media (max-width: 640px) {
+            #backToTopBtn {
+                bottom: 5rem; /* Position above contact button */
+                right: 1rem;
+                padding: 0.5rem;
+            }
+            
+            #backToTopBtn svg {
+                width: 20px;
+                height: 20px;
+            }
+        }  
     </style>
         <script>
         tailwind.config = {
@@ -1822,6 +1859,14 @@
     <!-- Back Button -->
     <button id="backButton" class="fixed top-5 right-5 font-archivo-narrow py-3 px-4 bg-white bg-opacity-10 backdrop-blur text-white border-none rounded-lg cursor-pointer text-base flex items-center gap-2 transition-all duration-300 hover:bg-white hover:bg-opacity-20 hover:scale-105 shadow-md z-50">
         <span class="text-lg">&#8592;</span> <!-- Left arrow -->
+    </button>
+
+    <!-- Back to top Button -->
+    <button id="backToTopBtn" class="fixed bottom-24 right-6 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center z-50 transform scale-0 opacity-0">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
     </button>
 
     <!-- Footer -->

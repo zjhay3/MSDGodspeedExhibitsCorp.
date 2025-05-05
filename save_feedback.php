@@ -3,6 +3,10 @@ include 'php/db.php';  // Updated path to include from the php subfolder
 
 header('Content-Type: application/json');
 
+// Get JSON data from the request body
+$json_data = file_get_contents('php://input');
+$data = json_decode($json_data, true);
+
 // For debugging - log the IP to error log
 error_log("Incoming request IP: " . $_SERVER['REMOTE_ADDR']);
 
@@ -30,25 +34,26 @@ if ($ip_count >= $limit) {
     exit;
 }
 
-// Validate inputs (assuming you're receiving POST data)
-$name = $_POST['name'] ?? '';
-$email = $_POST['email'] ?? '';
-$feedback = $_POST['feedback'] ?? '';
+// Validate inputs (getting data from JSON body)
+$name = $data['name'] ?? '';
+$email = $data['email'] ?? '';
+$rating = $data['rating'] ?? 0;
+$message = $data['message'] ?? '';
 
-if (empty($name) || empty($email) || empty($feedback)) {
-    echo json_encode(["error" => "Please fill in all fields."]);
+if (empty($email) || empty($message) || empty($rating)) {
+    echo json_encode(["error" => "Please fill in all required fields."]);
     exit;
 }
 
-// Save feedback to your feedback table
-$stmt = $conn->prepare("INSERT INTO feedbacks (name, email, feedback) VALUES (?, ?, ?)");
+// Save feedback to your feedback table - updated column names to match form fields
+$stmt = $conn->prepare("INSERT INTO feedback (name, email, rating, message) VALUES (?, ?, ?, ?)");
 if (!$stmt) {
     error_log("Feedback insert prepare failed: " . $conn->error);
     echo json_encode(["error" => "Database error while saving feedback."]);
     exit;
 }
 
-$stmt->bind_param("sss", $name, $email, $feedback);
+$stmt->bind_param("ssds", $name, $email, $rating, $message);
 if (!$stmt->execute()) {
     error_log("Feedback insert execute failed: " . $stmt->error);
     echo json_encode(["error" => "Failed to save feedback."]);
@@ -56,7 +61,7 @@ if (!$stmt->execute()) {
 }
 $stmt->close();
 
-// Log the IP and time - this is the part that was likely failing
+// Log the IP and time
 error_log("Attempting to log IP: $user_ip");
 $stmt = $conn->prepare("INSERT INTO ip_logs (ip_address, submitted_at) VALUES (?, NOW())");
 if (!$stmt) {
