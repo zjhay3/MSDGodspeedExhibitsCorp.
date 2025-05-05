@@ -1,6 +1,6 @@
 <?php
 // Sample DB connection (update with your credentials)
-$conn = new mysqli("localhost", "root", "", "msd_godspeed");
+$conn = new mysqli("localhost", "godspeedexhibits_godspeedexcorp", "?Vct9J5]T%*M", "godspeedexhibits_sub");
 
 // Check if the connection was successful
 if ($conn->connect_error) {

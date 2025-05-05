@@ -1,8 +1,8 @@
 <?php
 $host = "localhost";
-$user = "root"; //
-$pass = "";     //
-$dbname = "msd_godspeed";
+$user = "godspeedexhibits_godspeedexcorp"; //
+$pass = "?Vct9J5]T%*M";
+$dbname = "godspeedexhibits_sub";
 
 $conn = new mysqli($host, $user, $pass, $dbname);
 if ($conn->connect_error) {
