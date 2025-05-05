@@ -1,10 +1,9 @@
 <?php
 // Database credentials
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "msd_godspeed";
-
+$servername = "localhost"; 
+$username = "godspeedexhibits_godspeedexcorp"; 
+$password = "?Vct9J5]T%*M"; 
+$dbname = "godspeedexhibits_sub"; 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
