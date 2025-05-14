@@ -16,7 +16,7 @@
         }
           @keyframes blink-caret {
           from, to { border-color: transparent }
-          /*50% { border-color: #f0a500 } */
+          /* 50% { border-color: #f0a500 } */
         }
         
         .typing-animation {
@@ -25,7 +25,7 @@
           margin: 0 auto;
           /* letter-spacing: 0.15em; */
           animation: 
-            typing 4.0s steps(40, end),
+            typing 5.5s steps(40, end),
             blink-caret 0.75s step-end infinite;
         }
         html, body {
@@ -143,12 +143,12 @@
         </ul>
       </nav>
     </header>
-
+    <!-- Home Section  -->
     <section id="home" class="w-full overflow-hidden bg-dark-green text-white flex flex-col items-center pt-5 px-4">
         <!-- Hero Text -->
         <div class="hero-text-container relative w-full text-center mb-8">
           <div class="inline-block mx-auto">
-            <h1 class="hero-text font-archivo-black text-4xl md:text-5xl overflow-hidden whitespace-nowrap border-r-4 border-gold typing-animation">
+            <h1 class="hero-text font-archivo-black text-xl sm:text-2xl md:text-5xl overflow-hidden md:whitespace-nowrap border-r-4 border-gold typing-animation">
               Welcome to MSD Godspeed Exhibits Corp.
             </h1>
           </div>
