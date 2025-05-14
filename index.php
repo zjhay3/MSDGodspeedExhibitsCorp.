@@ -12,7 +12,21 @@
         /* Custom animations for typing effect */
         @keyframes typing {
             from { width: 0; }
-            to { width: 100% }
+            to { width: 50% }
+        }
+          @keyframes blink-caret {
+          from, to { border-color: transparent }
+          /*50% { border-color: #f0a500 } */
+        }
+        
+        .typing-animation {
+          overflow: hidden;
+          white-space: nowrap;
+          margin: 0 auto;
+          /* letter-spacing: 0.15em; */
+          animation: 
+            typing 4.0s steps(40, end),
+            blink-caret 0.75s step-end infinite;
         }
         html, body {
             overflow-x: hidden;
@@ -130,20 +144,23 @@
       </nav>
     </header>
 
-    <!-- Home Section -->
     <section id="home" class="w-full overflow-hidden bg-dark-green text-white flex flex-col items-center pt-5 px-4">
-    <!-- Hero Text (just below header) -->
-    <h1 class="hero-text text-center mb-8 leading-tight">
-      Welcome to MSD Godspeed Exhibits Corp.
-    </h1>
+        <!-- Hero Text -->
+        <div class="hero-text-container relative w-full text-center mb-8">
+          <div class="inline-block mx-auto">
+            <h1 class="hero-text font-archivo-black text-4xl md:text-5xl overflow-hidden whitespace-nowrap border-r-4 border-gold typing-animation">
+              Welcome to MSD Godspeed Exhibits Corp.
+            </h1>
+          </div>
+        </div>
 
-    <!-- Carousel Container (smaller and responsive) -->
-    <div class="carousel-container w-full max-w-[1400px] aspect-[16/9] overflow-hidden relative flex items-center justify-center">
-      <!-- Carousel slide -->
-      <div class="carousel-slide flex flex-nowrap transition-transform duration-800 ease-in-out h-full" id="carouselSlide"></div>
-      <!-- Carousel dots -->
-      <div class="carousel-dots absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2.5 z-10"></div>
-    </div>
+        <!-- Carousel Container (smaller and responsive) -->
+        <div class="carousel-container w-full max-w-[1400px] aspect-[16/9] overflow-hidden relative flex items-center justify-center">
+          <!-- Carousel slide -->
+          <div class="carousel-slide flex flex-nowrap transition-transform duration-800 ease-in-out h-full" id="carouselSlide"></div>
+          <!-- Carousel dots -->
+          <div class="carousel-dots absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2.5 z-10"></div>
+        </div>
     </section>
 
     <!-- About Section -->
